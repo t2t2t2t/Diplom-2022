@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main" prefHeight="718.0" prefWidth="824.0" style="-fx-background-color: #0c192a;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.theorygameapplication.RealTaskController">
+    <children>
+        <Label fx:id="lecture_name" layoutX="34.0" layoutY="39.0" text="Решение задачи " textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+      <BorderPane fx:id="center" layoutX="34.0" layoutY="92.0" prefHeight="604.0" prefWidth="770.0" />
+    </children>
+</AnchorPane>

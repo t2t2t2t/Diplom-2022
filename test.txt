@@ -1,0 +1,12 @@
+[  {    "questionText": "Какой язык программирования наиболее популярен?",    "answerOptions": [      "Java",      "Python",      "C++",      "JavaScript"    ]
+  },
+  {
+    "questionText": "Кто является создателем языка Python?",
+    "answerOptions": [
+      "Guido van Rossum",
+      "James Gosling",
+      "Bjarne Stroustrup",
+      "Brendan Eich"
+    ]
+  }
+]

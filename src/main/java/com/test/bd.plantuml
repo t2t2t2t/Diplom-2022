@@ -1,0 +1,57 @@
+@startuml
+
+!define Table(name, fields) class name as "Table name" << (T,#FFAAAA) >>
+!define PrimaryKey(x) x << (PK) >>
+!define ForeignKey(x, y, z, w) x << (FK) >> -- y : z - w
+
+Table(users, "users") {
+  + id INT
+  ++ name VARCHAR
+  PrimaryKey(id)
+}
+
+Table(topics, "topics") {
+  + id INT
+  ++ name VARCHAR
+  PrimaryKey(id)
+}
+
+Table(lectures, "lectures") {
+  + id INT
+  ++ title VARCHAR
+  ++ topic_id INT
+  PrimaryKey(id)
+  ForeignKey(topic_id, topics(id), lecture_topic_fk, topic_lectures_pk)
+}
+
+Table(examples, "examples") {
+  + id INT
+  ++ title VARCHAR
+  ++ topic_id INT
+  PrimaryKey(id)
+  ForeignKey(topic_id, topics(id), example_topic_fk, topic_examples_pk)
+}
+
+Table(tasks, "tasks") {
+  + id INT
+  ++ description VARCHAR
+  ++ topic_id INT
+  PrimaryKey(id)
+  ForeignKey(topic_id, topics(id), task_topic_fk, topic_tasks_pk)
+}
+
+Table(solutions, "solutions") {
+  + id INT
+  ++ user_id INT
+  ++ lecture_id INT
+  ++ example_id INT
+  ++ task_id INT
+  ++ is_correct BOOLEAN
+  PrimaryKey(id)
+  ForeignKey(user_id, users(id), solution_user_fk, user_solutions_pk)
+  ForeignKey(lecture_id, lectures(id), solution_lecture_fk, lecture_solutions_pk)
+  ForeignKey(example_id, examples(id), solution_example_fk, example_solutions_pk)
+  ForeignKey(task_id, tasks(id), solution_task_fk, task_solutions_pk)
+}
+
+@enduml

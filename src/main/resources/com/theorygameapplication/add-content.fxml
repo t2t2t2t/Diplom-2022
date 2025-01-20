@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main" prefHeight="718.0" prefWidth="824.0" style="-fx-background-color: #0c192a;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.theorygameapplication.AddContentController">
+<children>
+    <Label fx:id="lecture_name" alignment="CENTER" contentDisplay="CENTER" layoutX="243.0" layoutY="37.0" prefHeight="36.0" prefWidth="574.0" text="Добавление контента" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <font>
+            <Font size="30.0" />
+        </font>
+    </Label>
+      <AnchorPane fx:id="anch" layoutY="86.0" prefHeight="621.0" prefWidth="815.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="14.0" layoutY="230.0" prefHeight="266.0" prefWidth="824.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <VBox prefHeight="266.0" prefWidth="405.0">
+                     <children>
+                        <Label prefHeight="33.0" prefWidth="311.0" text="Введите название" textFill="WHITE">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <MFXTextField fx:id="Name" alignment="CENTER" prefHeight="50.0" prefWidth="311.0">
+                           <textFill>
+                              <Color red="1.0" green="1.0" blue="1.0" opacity="0.8700000047683716" />
+                           </textFill>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </MFXTextField>
+                        <Label prefHeight="33.0" prefWidth="311.0" text="Выберите тему" textFill="WHITE">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ChoiceBox fx:id="topicChoiceBox" prefHeight="50.0" prefWidth="311.0">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </ChoiceBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="266.0" prefWidth="334.0">
+                     <children>
+                        <CheckBox fx:id="lectureCB" mnemonicParsing="false" onAction="#lectureCB" prefHeight="50.0" prefWidth="311.0" text="Лекция" textFill="WHITE">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="TestCB" mnemonicParsing="false" onAction="#TestCB" prefHeight="50.0" prefWidth="311.0" text="Тест" textFill="WHITE">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="ExampleCB" mnemonicParsing="false" onAction="#ExampleCB" prefHeight="50.0" prefWidth="311.0" text="Пример" textFill="WHITE">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="TaskCB" mnemonicParsing="false" onAction="#TaskCB" prefHeight="50.0" prefWidth="311.0" text="Задача" textFill="WHITE">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="19.0" layoutY="48.0" prefHeight="100.0" prefWidth="785.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label prefHeight="36.0" prefWidth="184.0" text="Введите темы" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <MFXTextField fx:id="topicName" alignment="CENTER" prefHeight="50.0" prefWidth="311.0">
+                     <textFill>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.8700000047683716" />
+                     </textFill>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </MFXTextField>
+                  <Button fx:id="addTopicButton" mnemonicParsing="false" onAction="#addTopicButton" prefHeight="50.0" prefWidth="226.0" text="Добавить тему">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <Button fx:id="addFileTest" layoutX="256.0" layoutY="529.0" mnemonicParsing="false" onAction="#addFileTest" prefHeight="50.0" prefWidth="311.0" text="Добавить файл" />
+            <Label layoutY="148.0" text="-------------------------------------------------" textFill="#a9a9a9" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+            <Label layoutX="5.0" layoutY="-17.0" text="-------------------------------------------------" textFill="#a9a9a9" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+</children>
+</AnchorPane>

@@ -1,0 +1,55 @@
+/* Set background color to light gray */
+
+
+.list-cell {
+    -fx-background-color: transparent;
+}
+.list-view {
+    -fx-background-color: transparent;
+}
+.scroll-pane{
+    -fx-border-width: 0 0 2 0;
+    -fx-border-radius: 5;
+    -fx-border-color: #527190;
+}
+.table-cell-top {
+  -fx-background-color: red;
+}
+.text-field {
+    -fx-alignment: center;
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-radius: 5;
+    -fx-border-color: #527190;
+    -fx-text-fill: #b1bfcf; /* set the text color */
+    -fx-font-size: 20px; /* set the font size */
+}
+.vbox {
+    -fx-background-color: rgb(185, 206, 118);
+    -fx-pref-width: 250px;
+    -fx-alignment: center;
+
+}
+.center-pane {
+    -fx-pref-width: 1024px;
+    -fx-pref-height: 768px;
+}
+
+.button {
+    -fx-border-width: 0 0 2 0;
+    -fx-border-radius: 5;
+    -fx-border-color: #527190;
+    -fx-background-insets: 5 0;
+    -fx-background-color: transparent; /* set the button background color */
+    -fx-background-radius: 5; /* set the button corner radius */
+    -fx-text-fill: #b1bfcf; /* set the text color */
+    -fx-font-size: 20px; /* set the font size */
+    -fx-padding: 10 20; /* set the padding */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 10, 0, 0, 0); /* set the drop shadow */
+}
+.button:hover {
+
+    -fx-text-fill: #fff;
+    -fx-border-radius: 7;
+    -fx-border-color: #fff;
+}

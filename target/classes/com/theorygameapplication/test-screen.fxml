@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="main" prefHeight="718.0" prefWidth="824.0" style="-fx-background-color: #0c192a;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.theorygameapplication.TestScreenController">
+   <children>
+      <Label fx:id="lecture_name" layoutX="34.0" layoutY="39.0" text="Тест по лекции" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" layoutX="38.0" layoutY="72.0" prefHeight="617.0" prefWidth="753.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="100.0" />
+      <AnchorPane fx:id="alertPane" disable="true" layoutX="218.0" layoutY="14.0" prefHeight="200.0" prefWidth="387.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

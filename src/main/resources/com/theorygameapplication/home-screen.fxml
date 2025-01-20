@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #060e1a;" stylesheets="@css/design.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.theorygameapplication.HomeScreenController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane fx:id="main" prefHeight="604.0" prefWidth="721.0" style="-fx-background-color: #1a2b3b;" BorderPane.alignment="CENTER" />
+         </center>
+         <left>
+            <AnchorPane prefHeight="718.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="718.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="718.0" prefWidth="200.0" style="-fx-background-color: #060e1a;">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="680.0" prefWidth="50.0">
+                                 <padding>
+                                    <Insets bottom="10.0" left="3.0" right="3.0" top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <Label prefHeight="52.8" prefWidth="18.0" text="⚫" textFill="#527190">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label prefHeight="52.8" prefWidth="18.0" text="⚫" textFill="#527190">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="53.0" prefWidth="18.0" text="⚫" textFill="#527190">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="52.8" prefWidth="18.0" text="⚫" textFill="#527190">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="52.8" prefWidth="18.0" text="⚫" textFill="#527190">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="52.8" prefWidth="18.0" text="⚫" textFill="#527190">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="addPoint" disable="true" prefHeight="52.8" prefWidth="18.0" text="⚫" textFill="#527190" visible="false">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="680.0" prefWidth="150.0">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <Button fx:id="user" mnemonicParsing="false" onAction="#user" text="Вход" />
+                                    <Button fx:id="theory" mnemonicParsing="false" onAction="#theory" text="Теория" />
+                                    <Button fx:id="test" mnemonicParsing="false" onAction="#test" text="Тесты" />
+                                    <Button fx:id="example" mnemonicParsing="false" onAction="#example" text="Примеры" />
+                                    <Button fx:id="task1" mnemonicParsing="false" onAction="#task_real" text="Задачи" />
+                                    <Button fx:id="task" mnemonicParsing="false" onAction="#task" text="Решение">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button fx:id="addAdmin" disable="true" mnemonicParsing="false" onAction="#addAdmin" text="Добавить" visible="false">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Button fx:id="UserName" mnemonicParsing="false" onAction="#UserName" prefHeight="53.0" prefWidth="203.0" text="Button" />
+                     </children>
+                  </VBox>
+                  <ImageView disable="true" fitHeight="718.0" fitWidth="200.0" layoutX="10.0" layoutY="10.0" opacity="0.27" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@../../image/back.png" />
+                     </image>
+                     <effect>
+                        <GaussianBlur radius="5.88" />
+                     </effect>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </left>
+         <top>
+            <AnchorPane fx:id="top" prefHeight="50.0" prefWidth="50.0" BorderPane.alignment="CENTER">
+               <children>
+                  <BorderPane prefHeight="50.0" prefWidth="1024.0">
+                     <left>
+                        <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../../image/interface/menu.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" />
+                           </effect>
+                           <BorderPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </BorderPane.margin>
+                        </ImageView>
+                     </left>
+                     <right>
+                        <HBox alignment="CENTER" prefHeight="46.0" prefWidth="141.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="20.0" onMouseClicked="#minimize" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/interface/minus.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fitHeight="150.0" fitWidth="20.0" onMouseClicked="#maximize" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/interface/maximize.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fitHeight="150.0" fitWidth="20.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/interface/close.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets />
+                           </BorderPane.margin>
+                        </HBox>
+                     </right>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

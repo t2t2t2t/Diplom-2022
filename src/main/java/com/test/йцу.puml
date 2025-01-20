@@ -1,0 +1,45 @@
+@startuml
+
+!define Table(name, fields) class name as "Table name" << (T,#FFAAAA) >>
+!define PrimaryKey(x) x << (PK) >>
+!define ForeignKey(x) x << (FK) >>
+!define NotNull(x) x << (NN) >>
+
+Table(users, "users") {
+  id INT PrimaryKey(#AAFFAA)
+  name VARCHAR
+}
+
+Table(topics, "topics") {
+  id INT PrimaryKey(#AAFFAA)
+  name VARCHAR
+}
+
+Table(lectures, "lectures") {
+  id INT PrimaryKey(#AAFFAA)
+  title VARCHAR
+  topic_id INT ForeignKey(#FFFFAA) References topics(id)
+}
+
+Table(examples, "examples") {
+  id INT PrimaryKey(#AAFFAA)
+  title VARCHAR
+  topic_id INT ForeignKey(#FFFFAA) References topics(id)
+}
+
+Table(tasks, "tasks") {
+  id INT PrimaryKey(#AAFFAA)
+  description VARCHAR
+  topic_id INT ForeignKey(#FFFFAA) References topics(id)
+}
+
+Table(solutions, "solutions") {
+  id INT PrimaryKey(#AAFFAA)
+  user_id INT ForeignKey(#FFFFAA) References users(id)
+  lecture_id INT ForeignKey(#FFFFAA) References lectures(id)
+  example_id INT ForeignKey(#FFFFAA) References examples(id)
+  task_id INT ForeignKey(#FFFFAA) References tasks(id)
+  is_correct BOOLEAN
+}
+
+@enduml
